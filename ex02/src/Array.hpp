@@ -19,8 +19,8 @@ public:
     // Construction by copy and assignment operator. In both cases, modifying either the
     // original array or its copy after copying musn’t affect the other array
     Array& operator=(Array const& ob);
-    T& operator[](unsigned int n);
-    const T& operator[](unsigned int n) const;
+    T& operator[](long long n);
+    const T& operator[](long long n) const;
 
     // member functions
     unsigned int size() const;

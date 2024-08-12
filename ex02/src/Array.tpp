@@ -55,18 +55,18 @@ Array<T>& Array<T>::operator=(Array const& ob)
 }
 
 template <typename T>
-T& Array<T>::operator[](unsigned int n)
+T& Array<T>::operator[](long long n)
 {
-    if (n >= _size) {
+    if (n >= _size || n < 0) {
         throw OutOfBoundsException();
     }
     return _elements[n];
 }
 
 template <typename T>
-const T& Array<T>::operator[](unsigned int n) const
+const T& Array<T>::operator[](long long n) const
 {
-    if (n >= _size) {
+    if (n >= _size || n < 0) {
         throw OutOfBoundsException();
     }
     return _elements[n];
